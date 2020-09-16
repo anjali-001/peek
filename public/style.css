@@ -17,16 +17,16 @@ video{
 .main {
     height: 100vh;
     display: flex;
+    padding:0; 
 }
 
 .main__left {
-    flex: 0.8;
-    display: flex;
+    padding: 0;
     flex-direction: column;
 }
 
 .main__right {
-    flex: 0.2
+    padding: 0;
 }
 
 .main__videos {

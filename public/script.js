@@ -8,7 +8,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '443'
+    port: '3000'
 });
 
 let myVideoStream
@@ -99,7 +99,6 @@ const muteUnmute = () => {
 const setMuteButton = () => {
     const html = `
         <i class="fas fa-microphone"></i>
-        <span>Mute</span>
         `
         document.querySelector('.main__mute_button').innerHTML = html;
 }
@@ -107,7 +106,6 @@ const setMuteButton = () => {
 const setUnmuteButton = () => {
     const html = `
         <i class="unmute fas fa-microphone-slash"></i>
-        <span>Unmute</span>
         `
         document.querySelector('.main__mute_button').innerHTML = html;
 }
@@ -126,16 +124,14 @@ const playStop = () => {
 
 const setPlayVideo = () => {
     const html = `
-        <i class="stop fas fa-microphone-slash"></i>
-        <span>Play Video</span>
+        <i class="play_video fas fa-video-slash"></i>
         `
         document.querySelector('.main__video_button').innerHTML = html;
 }
 
 const setStopVideo = () => {
     const html = `
-        <i class="fas fa-microphone"></i>
-        <span>Stop Video</span>
+        <i class="stop_video fas fa-video"></i>
         `
         document.querySelector('.main__video_button').innerHTML = html;
 }
