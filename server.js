@@ -17,21 +17,30 @@ app.get('/',(req,res)=>{
 })
 
 app.get('/:room', (req,res)=>{
-    res.render('room', {roomId:req.params.room})
+    res.render('room', {roomId:req.params.room}) 
 })
 
 io.on('connection', socket=>{
+    io.clients((error,clients)=>{     // Added
+        if(error) throw error;    // Added
+        console.log(clients);    // Added
+    })
+    // console.log('users connected>>>>', io.clients)
     socket.on('join-room', (roomId,userId)=>{
+        // console.log('userId>>>>', userId);
         socket.join(roomId);
         socket.to(roomId).broadcast.emit('user-connected',userId)
-        socket.on('message', message => {
+        socket.on('message', message => { 
             io.to(roomId).emit('createMessage', message)
         })
 
         socket.on('disconnect', () => {
             socket.to(roomId).broadcast.emit('user-disconnected',userId)
+            // console.log('userid', userId) //Added
+
         })
+        
     })
 })
 
-server.listen(process.env.PORT||3000);
+server.listen(process.env.PORT||8000);

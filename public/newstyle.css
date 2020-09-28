@@ -9,11 +9,13 @@ body{
 #video-grid{
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-flow: wrap;
 }
 
 video{
-    height: 300px;
-    width: 400px;
+    height: 50vh;
+    width: 30vw;
     object-fit: cover;
 }
 .main__videos {
