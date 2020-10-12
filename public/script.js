@@ -149,5 +149,6 @@ function copyToClipboard(element) {
     $temp.val($(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
+    alert('Copied!'); 
   }
   
