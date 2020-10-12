@@ -19,6 +19,8 @@
 <body>
     
     <div class="main container-fluid">
+        <p id="roomId"><%= roomId %></p>
+        <button onclick="copyToClipboard('#roomId')">ClipBoard</button>
         <div class="row">
         <div class="main__left col-12 col-xs-12 col-sm-12 col-md-10 col-lg-10"> 
             <div class="main__videos row">
@@ -29,34 +31,16 @@
             <div class="main__controls">
                 <div class="main__controls__block p-5 row">
                     <div onclick="muteUnmute()" class="main__controls__button main__mute_button p-3">
-                        <i class="fas fa-microphone unmute"></i>
+                        <i class="fas fa-microphone "></i>
                     </div>
                     <div onclick="playStop()" class="main__controls__button main__video_button p-3">
-                        <i class="fas fa-video stop_video play_video"></i>
+                        <i class="fas fa-video stop_video"></i>
                     </div>
                     <div class="main__controls__button p-3">
                         <i class="fas fa-phone-alt leave_meeting"></i>
                      </div>
                 </div>
-                <!-- <div class="main__controls__block"> -->
-                    <!-- <div class="main__controls__block">
-                        <div class="main__controls__button">
-                           <i class="fas fa-shield-alt"></i>
-                           <span>Security</span>
-                        </div>
-                        <div class="main__controls__button">
-                           <i class="fas fa-user-friends"></i>
-                           <span>Participants</span>
-                        </div>
-                        <div class="main__controls__button">
-                           <i class="fas fa-comment-alt"></i>
-                           <span>Chat</span>
-                        </div>
-                     </div> -->
-                     <!-- <div class="main__controls__block">
-                        
-                </div>
-            </div> -->
+               
             </div>
         </div>
         <div class="main__right col-12 col-sm-12 col-md-2 col-lg-2 col-xs-12">

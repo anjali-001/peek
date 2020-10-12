@@ -4,6 +4,7 @@ body{
     min-width: 100vw;
     min-height: 100vh;
     overflow-x: hidden;
+    background-color: black;
 }
 
 #video-grid{
@@ -42,8 +43,8 @@ video{
 .leave_meeting:hover {
     color: #CC3B33;
 }
-
-.unmute, .stop_video:hover{
+.unmute,.unmute:hover, 
+.stop_video:hover{
     color: #CC3B33;
 }
 .play_video{
