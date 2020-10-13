@@ -146,7 +146,7 @@ const setStopVideo = () => {
 function copyToClipboard(element) {
     var $temp = $("<input>");
     $("body").append($temp);
-    $temp.val($(element).text()).select();
+    $temp.val("https://peek-video.herokuapp.com/"+$(element).text()).select();
     document.execCommand("copy");
     $temp.remove();
     alert('Copied!'); 
