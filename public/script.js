@@ -8,7 +8,7 @@ myVideo.muted = true;
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '8000'
+    port: '443'
 });
 
 let myVideoStream
@@ -150,5 +150,9 @@ function copyToClipboard(element) {
     document.execCommand("copy");
     $temp.remove();
     alert('Copied!'); 
+  }
+
+  const endMeet = () => {
+    location.href = '/end';
   }
   

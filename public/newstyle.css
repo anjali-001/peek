@@ -61,14 +61,15 @@ video{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 6vh;
-    width: 30%;
+    min-height: 6vh;
+    min-width: 30%;
     position: fixed;
     border-radius: 30px;
     bottom: 0;
 }
 .main__controls__button i {
     font-size: 30px;
+    cursor: pointer;
 }
 .main__mute_button i:hover{
     color: #CC3B33;
@@ -78,14 +79,25 @@ video{
 }
 .main__message_container{
     height: 3vh;
+    margin-top: 10px;
     align-items: center;
 }
 
-.navbar{
-    background-color: #1C1E20 !important;
-}
 
 .chat{
     border: 1px solid white;
     border-radius: 10px;
 }
+
+
+.leave{
+    color: white;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+    transform: translate(0%, 50%);
+}
+

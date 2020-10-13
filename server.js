@@ -11,6 +11,9 @@ const peerServer = ExpressPeerServer(server, {
 app.set('view engine', 'ejs');
 app.use(express.static('public'))
 
+app.use('/end',(req,res)=>{
+    res.render('leave')
+})
 app.use('/peerjs',peerServer)
 app.get('/',(req,res)=>{
     res.redirect(`/${uuidv4()}`)

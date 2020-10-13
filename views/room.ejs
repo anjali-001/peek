@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zoom Clone</title>
+    <title>Peek</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="newstyle.css">
     <script src="/socket.io/socket.io.js"></script>
@@ -34,22 +34,20 @@
 
                 </div>
             </div>
-            <div class="main__controls">
-                <div class="main__controls__block p-5 row">
-                    <div class="main__controls__button p-3">
+            <div class="main__controls py-1">
+                    <div class="main__controls__button px-4">
                         <p id="roomId" class="d-none"><%= roomId %></p>
                          <i class="fa fa-clipboard text-light" onclick="copyToClipboard('#roomId')"></i>
                     </div>
-                    <div onclick="muteUnmute()" class="main__controls__button main__mute_button p-3">
+                    <div onclick="muteUnmute()" class="main__controls__button main__mute_button  px-4">
                         <i class="fas fa-microphone"></i>
                     </div>
-                    <div onclick="playStop()" class="main__controls__button main__video_button p-3">
+                    <div onclick="playStop()" class="main__controls__button main__video_button px-4">
                         <i class="fas fa-video stop_video"></i>
                     </div>
-                    <div class="main__controls__button p-3">
+                    <div class="main__controls__button px-4" onclick="endMeet()">
                         <i class="fas fa-phone-alt leave_meeting"></i>
                      </div>
-                </div>
                
             </div>
         </div>
@@ -63,7 +61,7 @@
                 </ul>
             </div>
             <div class="main__message_container">
-                <input id="chat_message" type="text" placeholder="Type message here..." class="form-control">
+                <input id="chat_message" type="text" placeholder="Type message here..." class="form-control" />
             </div>
         </div>
     </div>
